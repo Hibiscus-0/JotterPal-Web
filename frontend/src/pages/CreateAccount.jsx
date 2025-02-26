@@ -3,6 +3,7 @@ import { Box, TextField, Button, Typography, MenuItem } from "@mui/material";
 import mascot from "/src/assets/JotterpalLogo.png";
 import { Link } from "@mui/material";
 import ConfirmationDialog from "../components/ConfirmationDialog";
+import { Link as RouterLink } from "react-router-dom";
 
 const inputStyles = {
   marginTop: "5px",
@@ -82,7 +83,7 @@ const CreateAccount = () => {
       <Box
         sx={{
           width: { xs: "100%", md: "50%" },
-          backgroundColor: "#fff",
+          backgroundColor: "#F5FFFA",
           borderTopLeftRadius: { xs: "0", md: "40px" },
           borderBottomLeftRadius: { xs: "0", md: "40px" },
           display: "flex",
@@ -170,6 +171,7 @@ const CreateAccount = () => {
             width: "100%",
             padding: "10px",
             borderRadius: "8px",
+            marginTop: "20px",
             "&:hover": { backgroundColor: "#1E8663" },
             "&:active": { backgroundColor: "#0F112D" },
           }}
@@ -180,7 +182,20 @@ const CreateAccount = () => {
 
         <Typography variant="body2" sx={{ fontWeight: "bold", marginTop: "10px", textAlign: "center" }}>
           Already have an account?{" "}
-          <Link href="#" sx={{ color: "#1E2054", fontWeight: "bold", textDecoration: "underline", textDecorationThickness: "2px", textUnderlineOffset: "4px" }}>
+          <Link
+            component={RouterLink} // Use RouterLink for navigation
+            to="/login" // Path to the LoginAccount page
+            sx={{
+              color: "#1E2054",
+              fontWeight: "bold",
+              textDecoration: "underline",
+              textDecorationThickness: "2px",
+              textUnderlineOffset: "4px",
+              "&:hover": {
+                textDecorationThickness: "3px", // Thicker underline on hover
+              },
+            }}
+          >
             Login
           </Link>
         </Typography>
