@@ -1,6 +1,6 @@
 import React from "react";
 import { Dialog, DialogTitle, DialogContent, DialogActions, Button, Typography, Box } from "@mui/material";
-import { keyframes } from "@mui/system"; // Import keyframes
+import { keyframes } from "@mui/system"; 
 import CheckCircleIcon from "@mui/icons-material/CheckCircle";
 
 const scaleUp = keyframes`
@@ -79,7 +79,7 @@ const ConfirmationDialog = ({ open, onClose, title, message, buttonText }) => {
         </Typography>
       </DialogContent>
 
-      {/* Dialog Actions (OK Button) */}
+      {/* Dialog Actions (Button) */}
       <DialogActions
         sx={{
           justifyContent: "center",

@@ -138,8 +138,8 @@ const LoginAccount = () => {
   }}
 >
   <Link
-    /*component={RouterLink} // Use RouterLink for navigation
-    to="/forgot-password"*/ // Path to the Forgot Password page
+    component={RouterLink} // Use RouterLink for navigation
+    to="/forgot-password" // Path to the ForgotPassword page
     sx={{
       color: "#1E2054",
       fontWeight: "bolder", 
